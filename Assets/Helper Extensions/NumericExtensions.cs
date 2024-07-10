@@ -47,8 +47,8 @@ namespace SG.Extensions
                 (min, max) = (max, min);
             }
 
-            return includeMin ? value.CompareTo(min) >= 0 : value.CompareTo(min) > 0 &&
-                   includeMax ? value.CompareTo(max) <= 0 : value.CompareTo(max) < 0;
+            return (includeMin ? value.CompareTo(min) >= 0 : value.CompareTo(min) > 0) &&
+                   (includeMax ? value.CompareTo(max) <= 0 : value.CompareTo(max) < 0);
         }
 
         public static bool IsBetweenStrictly<T>(this T value, T min, T max) where T : IComparable<T>
