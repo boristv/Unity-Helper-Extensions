@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SG.Extensions
+namespace SG.Utils
 {
     public static class UIExtensions
     {

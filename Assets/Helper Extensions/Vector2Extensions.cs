@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace SG.Extensions
+namespace SG.Utils
 {
     public static class Vector2Extensions
     {

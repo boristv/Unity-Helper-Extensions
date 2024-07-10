@@ -1,6 +1,6 @@
 using System;
 
-namespace SG.Extensions
+namespace SG.Utils
 {
     public static class EnumExtensions
     {

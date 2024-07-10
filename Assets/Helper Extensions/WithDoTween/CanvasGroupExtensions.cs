@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-namespace SG.Extensions
+namespace SG.Utils
 {
     public static class CanvasGroupExtension
     {
