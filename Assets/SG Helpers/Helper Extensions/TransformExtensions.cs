@@ -24,6 +24,25 @@ namespace SG.Utils
             transform.localScale = Vector3.one;
         }
         
+        public static void SetLayerWithAllChild(this Transform root, int layer)
+        {
+            Queue<Transform> queue = new Queue<Transform>();
+
+            queue.Enqueue(root);
+
+            while (queue.Count > 0)
+            {
+                var current = queue.Dequeue();
+
+                current.gameObject.layer = layer;
+
+                foreach (Transform child in current)
+                {
+                    queue.Enqueue(child);
+                }
+            }
+        }
+        
         public static float DistanceTo(this Transform transform, Transform target)
         {
             return Vector3.Distance(transform.position, target.position);
