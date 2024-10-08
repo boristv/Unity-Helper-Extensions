@@ -22,6 +22,11 @@ namespace SG.Utils
             return count;
         }
         
+        public static T GetRandomElement<T>(this IList<T> list)
+        {
+            return list.Count == 0 ? default : list[Random.Range(0, list.Count)];
+        }
+        
         public static bool TryGetRandomElement<T>(this IList<T> list, out T element)
         {
             if (list.Count == 0)
